@@ -1,6 +1,7 @@
 <?php
 
-use Avir\Seed\Seed;
+namespace Avir\Seed;
+
 
 class Seeder extends Seed
 {
@@ -23,6 +24,9 @@ class Seeder extends Seed
         $this->dateForm = date('d.m.Y h:m:s');
         $this->date = $this->dateForm;
         $this->browsName = null;
+    }
+    public function test(){
+        echo 'Hello';
     }
 
     public function seeder(callable $routeGet){
