@@ -75,14 +75,15 @@ class Seeder extends Seed
                     }
                     fwrite($handler, "uri : $reqUri  info : $strBrowser referef : $referer ");
                     echo 'В разработке';
+                    return false;
                 }
             }
             else {
-                $routeGet();
+                return true;
             }
         }
         else {
-            $routeGet();
+            return true;
         }
         if (empty($strBrowser)){
             $strBrowser = "Parser";
