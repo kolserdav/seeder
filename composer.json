@@ -1,0 +1,16 @@
+{
+    "name": "kolserdav/seeder",
+    "description": "Logger",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kolserdav",
+            "email": "serega12101983@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+      "psr-4": {"Avir\\Seeder\\": "app/"}
+    }
+}
