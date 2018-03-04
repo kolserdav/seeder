@@ -28,7 +28,7 @@ class Seeder extends Seed
         echo 'Hello';
     }
 
-    public function seeder(callable $routeGet){
+    public function seeder(){
         $this->getInfo();
         $browser = $this->getBrowser();
         $bots = '%.*bot%';
