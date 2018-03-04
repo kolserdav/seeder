@@ -1,7 +1,5 @@
 <?php
 
-namespace Avir\Seed\Seeder;
-
 use Avir\Seed\Seed;
 
 class Seeder extends Seed
