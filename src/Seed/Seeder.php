@@ -63,7 +63,7 @@ class Seeder extends Seed
         if ($this->hostName != parent::MY_HOST) {
             if ($this->userIp != parent::MY_IP && $this->requestUri != "/favicon.ico") {
                 $method = $this->method;
-                $file = tempnam(__DIR__.'/../private_logs', "$method '' $this->date '' $browserName '' $this->userIp ''");
+                $file = tempnam(__DIR__.'/../logs', "$method '' $this->date '' $browserName '' $this->userIp ''");
                 if ($file) {
                     $handler = fopen("$file", "r+");
                     $reqUri = $this->requestUri;
