@@ -2,7 +2,6 @@
 
 namespace Avir\Seed;
 
-
 class Seeder extends Seed
 {
     protected $env;
@@ -71,7 +70,7 @@ class Seeder extends Seed
                     try {
                         $referer = $_SERVER['HTTP_REFERER'];
                     }
-                    catch (Exception $e){
+                    catch (\Exception $e){
                         $referer = 'no referer';
                     }
                     fwrite($handler, "uri : $reqUri  info : $strBrowser referef : $referer ");
