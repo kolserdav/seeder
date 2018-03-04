@@ -24,9 +24,6 @@ class Seeder extends Seed
         $this->date = $this->dateForm;
         $this->browsName = null;
     }
-    public function test(){
-        echo 'Hello';
-    }
 
     public function seeder(){
         $this->getInfo();
@@ -63,7 +60,7 @@ class Seeder extends Seed
         if ($this->hostName != parent::MY_HOST) {
             if ($this->userIp != parent::MY_IP && $this->requestUri != "/favicon.ico") {
                 $method = $this->method;
-                $file = tempnam(__DIR__.'/../logs', "$method '' $this->date '' $browserName '' $this->userIp ''");
+                $file = tempnam(__DIR__.'/../../../../../logs', "$method '' $this->date '' $browserName '' $this->userIp ''");
                 if ($file) {
                     $handler = fopen("$file", "r+");
                     $reqUri = $this->requestUri;
@@ -73,7 +70,8 @@ class Seeder extends Seed
                     catch (\Exception $e){
                         $referer = 'no referer';
                     }
-                    fwrite($handler, "uri : $reqUri  info : $strBrowser referef : $referer ");
+                    $string = json_encode(['uri' => $reqUri,  'info' => $strBrowser, 'referer' => $referer]);
+                    fwrite($handler, $string);
                     echo 'В разработке';
                     return false;
                 }
