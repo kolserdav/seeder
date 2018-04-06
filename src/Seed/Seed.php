@@ -4,9 +4,9 @@ namespace Avir\Seed;
 
 abstract class Seed
 {
-    const   MY_IP = "188.162.77.218",
-            MY_HOST = "askiz.tk.loc",
-            SRVER_IP = "31.41.216.88";
+    const   MY_IP = "myIP",
+            MY_HOST = "myHost",
+            SRVER_IP = "serverIP";
     public  $requestUri,
             $method;
 
